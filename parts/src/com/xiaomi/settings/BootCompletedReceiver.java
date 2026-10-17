@@ -13,6 +13,7 @@ import android.os.UserHandle;
 import android.util.Log;
 
 import com.xiaomi.settings.peripheral.KeyboardUtilsService;
+import com.xiaomi.settings.thermal.ThermalProfile;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
 
@@ -37,6 +38,9 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         // Peripherals
         context.startServiceAsUser(new Intent(context, KeyboardUtilsService.class),
                 UserHandle.CURRENT);
+
+        // Thermal profile
+        ThermalProfile.restore(context);
     }
 
     private static void onBootCompleted(Context context) {
