@@ -28,7 +28,9 @@ public class KeyboardUtilsService extends Service {
         if (mInputManager == null) {
             mInputManager = (InputManager) getSystemService(Context.INPUT_SERVICE);
         }
-        setKeyboardEnabled(false);
+        // Do not disable the keyboard here: the xiaomi-keyboard vendor daemon
+        // binds the keyboard HID only while the keyboard is attached, so the
+        // on-screen keyboard is still available when it is detached.
     }
 
     @Override
