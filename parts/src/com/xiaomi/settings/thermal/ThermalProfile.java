@@ -20,12 +20,12 @@ import java.io.IOException;
  * /sys/class/thermal/thermal_message/sconfig.
  *
  * Profile ids were mapped on muyu (OS3.0.7.0 thermal configs):
- *   -1 / 0  normal    big cores throttled from 37 C in 10 steps
+ *    0      normal    big cores throttled from 37 C in 10 steps (-1 is ignored)
  *   18      tgame     no CPU / GPU throttling until 48 C
  *    6      nolimits  no CPU / GPU throttling until 51 C
  */
 public enum ThermalProfile {
-    BALANCED(-1, R.string.thermal_profile_balanced),
+    BALANCED(0, R.string.thermal_profile_balanced),
     PERFORMANCE(18, R.string.thermal_profile_performance),
     MAXIMUM(6, R.string.thermal_profile_maximum);
 
