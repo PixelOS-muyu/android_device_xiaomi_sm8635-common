@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2026 The PixelOS Project
+
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="performance_tile_label">Rendimiento</string>
+    <string name="thermal_profile_balanced">Equilibrado</string>
+    <string name="thermal_profile_performance">Rendimiento</string>
+    <string name="thermal_profile_maximum">Máximo (se calienta)</string>
+</resources>
