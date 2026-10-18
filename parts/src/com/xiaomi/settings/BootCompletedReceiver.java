@@ -12,6 +12,7 @@ import android.content.Intent;
 import android.os.UserHandle;
 import android.util.Log;
 
+import com.xiaomi.settings.peripheral.KeyboardBacklightController;
 import com.xiaomi.settings.peripheral.KeyboardUtilsService;
 import com.xiaomi.settings.thermal.ThermalProfile;
 
@@ -41,6 +42,9 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 
         // Thermal profile
         ThermalProfile.restore(context);
+
+        // Adaptive keyboard backlight
+        KeyboardBacklightController.start(context);
     }
 
     private static void onBootCompleted(Context context) {
